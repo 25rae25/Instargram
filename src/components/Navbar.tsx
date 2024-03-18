@@ -19,12 +19,12 @@ const menu = [
 	{
 		href: '/search',
 		icon: <SearchIcon />,
-		chickedIcon: <SearchFillIcon />,
+		clickedIcon: <SearchFillIcon />,
 	},
 	{
 		href: '/new',
 		icon: <NewIcon />,
-		chickedIcon: <NewFillIcon />,
+		clickedIcon: <NewFillIcon />,
 	}
 ]
 
