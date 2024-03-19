@@ -9,7 +9,7 @@ const authOptions: NextAuthOptions = {
 	],
 	callbacks: {
 		async session({ session}) {
-			console.log(session)
+			// console.log(session)
 			return session
 			const user = session?.user;
 			if(user) {
