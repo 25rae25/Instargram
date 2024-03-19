@@ -1,6 +1,8 @@
 import { addUser } from "@/service/user";
 import NextAuth, { NextAuthOptions } from "next-auth"
 import GoogleProvider from "next-auth/providers/google"
+
+
 const authOptions: NextAuthOptions = {
 	providers: [
 		GoogleProvider({
@@ -34,10 +36,8 @@ const authOptions: NextAuthOptions = {
 			return session;
 		},
 		async redirect({ url, baseUrl }) {
-			console.log(url, baseUrl, '1111111')
 			return baseUrl
-			
-			}
+		}
 	},
 	pages: {
 		signIn: '/auth/signin',
