@@ -33,12 +33,19 @@ const authOptions: NextAuthOptions = {
 			}
 			return session;
 		},
+		async redirect({ url, baseUrl }) {
+			console.log(url, baseUrl, '1111111')
+			return baseUrl
+			
+			}
 	},
 	pages: {
 		signIn: '/auth/signin',
-	}
+	},
+	
 }
 
 const handler = NextAuth(authOptions);
+
 
 export { handler as GET, handler as POST, authOptions };
