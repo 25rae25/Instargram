@@ -25,7 +25,6 @@ const authOptions: NextAuthOptions = {
 			return true;
 		},
 		async session({ session}) {
-			console.log(session)
 			const user = session?.user;
 			if(user) {
 				session.user = {
