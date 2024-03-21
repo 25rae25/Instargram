@@ -34,7 +34,7 @@ export default function PostDetail({post}: Props) {
 				<ul className="border-t border-gray-200 h-full overflow-y-auto p-4 mb-1">
 					{comments && comments.map(({image, username: commentUsername, comment}, index) => (
 						<li key={index} className="flex items-center mb-1">
-							<Avatar 
+							<Avatar
 							 image={image} 
 							 size="small" 
 							 highlight={commentUsername === username} />
