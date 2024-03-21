@@ -6,8 +6,8 @@ import GoogleProvider from "next-auth/providers/google"
 const authOptions: NextAuthOptions = {
 	providers: [
 		GoogleProvider({
-			clientId: process.env.GOOGLE_OAUTH_ID || '',
-			clientSecret: process.env.GOOGLE_OAUTH_SECRET || '',
+			clientId: process.env.GOOGLE_OAUTH_ID as string || '',
+			clientSecret: process.env.GOOGLE_OAUTH_SECRET as string || '',
 		}),
 	],
 	callbacks: {
@@ -45,6 +45,5 @@ const authOptions: NextAuthOptions = {
 }
 
 const handler = NextAuth(authOptions);
-
 
 export { handler as GET, handler as POST, authOptions };

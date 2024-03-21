@@ -8,8 +8,11 @@ import SWRConfigContext from "@/context/SWRConfigContex";
 const openSans = Open_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-	title: "Instargram",
-	description: "Instargram입니다",
+	title: {
+		default: 'Instargram',
+		template: 'Instargram | s'
+	},
+	description: "Instargram Photos",
 };
 
 export default function RootLayout({
