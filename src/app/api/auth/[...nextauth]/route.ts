@@ -36,9 +36,9 @@ const authOptions: NextAuthOptions = {
 			}
 			return session;
 		},
-		// async redirect({ url, baseUrl }) {
-		// 	return baseUrl
-		// }
+		async redirect({ url, baseUrl }) {
+			return baseUrl
+		},
 		async jwt({token, user}) {	
 			if(user) {
 				token.id = user.id;
