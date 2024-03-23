@@ -1,4 +1,4 @@
-'use client'
+// 'use client'
 
 import { parseDate } from "@/util/date";
 import HeartIcon from "./ui/icons/HeartIcon";

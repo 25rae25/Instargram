@@ -64,8 +64,9 @@ export async function getSavedPostOf(username: string) {
 			| order(_createdAt desc) {
 				${simplePostProjection}
 			}
-		`
-		)
+		`,	
+		undefined,
+		{cache: 'no-store'})
 		.then(mapPosts);
 }
 
