@@ -10,7 +10,7 @@ const openSans = Open_Sans({ subsets: ["latin"] });
 export const metadata: Metadata = {
 	title: {
 		default: 'Instargram',
-		template: 'Instargram | s'
+		template: 'Instargram'
 	},
 	description: "Instargram Photos",
 };
