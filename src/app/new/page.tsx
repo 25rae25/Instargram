@@ -1,5 +1,3 @@
 export default function NewPostPage() {
-	return(
-		<p>New post Page</p>
-	)
+	return <p>New Post Page</p>;
 }

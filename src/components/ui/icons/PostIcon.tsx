@@ -1,11 +1,6 @@
 import React from 'react';
 import { MdGridOn } from 'react-icons/md';
 
-type Props = {
-  className?: string;
-}
-
-
-export default function PostIcon({className}: Props) {
+export default function PostIcon() {
   return <MdGridOn className='w-3 h-3' />;
 }
