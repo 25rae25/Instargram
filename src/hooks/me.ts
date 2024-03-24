@@ -1,5 +1,6 @@
 import { SimplePost } from '@/model/post';
 import { HomeUser } from '@/model/user';
+import { useCallback } from 'react';
 import useSWR from 'swr';
 
 async function updateBookmark(postId: string, bookmark: boolean) {
@@ -12,7 +13,8 @@ async function updateBookmark(postId: string, bookmark: boolean) {
 export default function useMe() {
 	const { data: user, isLoading, error, mutate } = useSWR<HomeUser>('/api/me');
 
-	const setBookmark = (postId: string, bookmark: boolean) => {
+	const setBookmark = useCallback(
+		(postId: string, bookmark: boolean) => {
 		if (!user) return;
 		const bookmarks = user.bookmarks;
 		const newUser = {
@@ -28,6 +30,6 @@ export default function useMe() {
 			revalidate: false,
 			rollbackOnError: true,
 		});
-	};
+	}, [user, mutate])
 	return { user, isLoading, error, setBookmark };
 }
