@@ -1,3 +1,5 @@
+'use client'
+
 import BookmarkIcon from './ui/icons/BookmarkIcon';
 import HeartIcon from './ui/icons/HeartIcon';
 import { parseDate } from '@/util/date';
@@ -8,11 +10,13 @@ import { Comment, SimplePost } from '@/model/post';
 import usePosts from '@/hooks/posts';
 import useMe from '@/hooks/me';
 import CommentForm from './CommentForm';
+
 type Props = {
   post: SimplePost;
   children?: React.ReactNode;
   onComment: (comment: Comment) => void;
 };
+
 export default function ActionBar({ post, children, onComment }: Props) {
   const { id, likes, createdAt } = post;
   const { user, setBookmark } = useMe();
