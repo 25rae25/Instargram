@@ -131,7 +131,8 @@ export async function createPost(userId: string, text: string, file: Blob) {
 				comment: text,
 				author: { _ref: userId, _type: 'reference' },
 			}],	
-				likes: []},	
+				likes: []
+			},	
 				{ autoGenerateArrayKeys: true }	
 			);	
 		});	
