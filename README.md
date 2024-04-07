@@ -4,6 +4,8 @@
 
 사용 방법 : yarn install / node 18버전 이상 / google 로그인 
 
+설명 : instargram을 Next.js, Sanity를 이용해서 따라 만들었습니다.
+
 [로그인시 나오는 페이지]
 ![스크린샷 2024-03-27 오전 12 56 38](https://github.com/25rae25/Instargram/assets/64051267/1b17b737-45ea-4592-8fc1-0065f10312c2)
 
